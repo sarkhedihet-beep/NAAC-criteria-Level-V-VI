@@ -1,0 +1,62 @@
+@{
+    ViewData["Title"] = "Register";
+    Layout = "_Layout";
+}
+
+<div class="container d-flex justify-content-center align-items-center" style="min-height: 90vh;">
+    <div class="card shadow-lg login-card">
+        <div class="card-body p-4">
+
+            <h3 class="text-center fw-bold text-primary mb-2">
+                NAAC 
+            </h3>
+
+            <p class="text-center text-muted mb-4">
+                User Registration (Admin Approval Required)
+            </p>
+
+            @if (ViewBag.Message != null)
+            {
+                <div class="alert alert-success text-center">
+                    @ViewBag.Message
+                </div>
+            }
+
+            <form method="post">
+                <div class="mb-3">
+                    <label class="form-label">Full Name</label>
+                    <input type="text"
+                           name="fullName"
+                           class="form-control"
+                           placeholder="Enter full name"
+                           required />
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Email ID</label>
+                    <input type="email"
+                           name="email"
+                           class="form-control"
+                           placeholder="Enter email"
+                           required />
+                </div>
+
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-primary btn-lg">
+                        Register User
+                    </button>
+                </div>
+            </form>
+
+            <div class="text-center mt-3">
+                <small class="text-muted">
+                    Already have an account?
+                    <a asp-controller="Account" asp-action="Login">Login</a>
+                    <br />
+                    * Faculty accounts are created by Admin/HOD
+                </small>
+            </div>
+
+        </div>
+    </div>
+</div>

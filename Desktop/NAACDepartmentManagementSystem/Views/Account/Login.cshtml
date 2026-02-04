@@ -1,0 +1,50 @@
+@{
+    ViewData["Title"] = "Login";
+    Layout = "_Layout";
+}
+
+<div class="container d-flex justify-content-center align-items-center" style="min-height: 90vh;">
+    <div class="card shadow-lg login-card">
+        <div class="card-body p-4">
+
+            <h3 class="text-center fw-bold text-primary mb-2">
+                NAAC
+            </h3>
+
+            <p class="text-center text-muted mb-4">
+                Secure Login for Faculty, HOD & NAAC Coordinator
+            </p>
+
+            <form method="post">
+                <div class="mb-3">
+                    <label class="form-label">Email ID</label>
+                    <input type="email" name="email" class="form-control" placeholder="Enter email" required />
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Password</label>
+                    <input type="password" name="password" class="form-control" placeholder="Enter password" required />
+                </div>
+
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-primary btn-lg">
+                        Login
+                    </button>
+                </div>
+            </form>
+
+            <div class="text-center mt-3">
+                <small class="text-muted">
+                    <a asp-controller="Account" asp-action="Register">want to register?</a><br />
+                    * Faculty accounts are created by Admin/HOD only
+                    <br />
+                    <a asp-controller="Account" asp-action="ForgotPassword">
+                        Forgot Password?
+                    </a>
+
+                </small>
+            </div>
+
+        </div>
+    </div>
+</div>
