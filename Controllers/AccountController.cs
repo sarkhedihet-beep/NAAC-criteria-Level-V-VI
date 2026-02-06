@@ -1,4 +1,3 @@
-// Testing GitHub upload
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -54,6 +53,11 @@ namespace NAACDepartmentManagementSystem.Controllers
             }
 
             ViewBag.Error = "Invalid username or password";
+            return View();
+        }
+        [HttpGet]
+        public IActionResult ForgotPassword()
+        {
             return View();
         }
         public IActionResult Index()
